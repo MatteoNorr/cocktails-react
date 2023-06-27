@@ -1,0 +1,20 @@
+.ProductList {
+  display: flex;
+  flex-direction: column;
+  overflow-x: scroll;
+  box-shadow: 5px 5px 10px black;
+  margin: 2%;
+  border-radius: 20px;
+}
+
+.ProductList::-webkit-scrollbar {
+  display: none;
+}
+
+.ProductSection__title {
+  text-align: center;
+}
+
+.ProductList__container {
+  display: flex;
+}

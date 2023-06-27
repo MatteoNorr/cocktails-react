@@ -4,10 +4,12 @@ const ProductSection = () => {
       <img src="" alt="" />
       <div>
         <div>
-          <h1></h1>
+          <h1>Prova</h1>
           <p></p>
         </div>
       </div>
     </div>
   );
 };
+
+export default ProductSection;

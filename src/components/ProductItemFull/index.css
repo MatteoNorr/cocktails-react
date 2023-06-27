@@ -1,0 +1,19 @@
+.ProductItemFull {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgb(117, 117, 117);
+  gap: 10px;
+}
+
+.ProductItemFull__title {
+  text-align: center;
+}
+
+.ProductItemFull__img {
+  height: 100px;
+  border-radius: 10px;
+}

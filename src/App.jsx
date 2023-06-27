@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import ProductSection from "./components/ProductSection";
 import ProductList from "./components/ProductList";
 import "./App.css";
+import ProductItemFull from "./components/ProductItemFull";
 
 function App() {
   const [section, setSection] = useState("");
@@ -21,11 +22,11 @@ function App() {
           </>
         );
       case "Vodka":
-        return <ProductList name="Vodka" />;
+        return <ProductItemFull name="Vodka" />;
       case "Rum":
-        return <ProductList name="Rum" />;
+        return <ProductItemFull name="Rum" />;
       case "Tequila":
-        return <ProductList name="Tequila" />;
+        return <ProductItemFull name="Tequila" />;
     }
   }
 }

@@ -13,22 +13,22 @@ const ProductList = ({ name, setSection }) => {
   }, []);
 
   return (
-    <div className="ProductList">
-      <div className="ProductSection__title">
-        <h1>{name}</h1>
+    <>
+      <h1 className="ProductSection__title">{name}</h1>
+      <div className="ProductList">
+        <div className="ProductList__container">
+          {list.map((data) => (
+            <div
+              className="ProductItem__container"
+              key={data.idDrink}
+              onClick={setSection}
+            >
+              <ProductItem data={data} />
+            </div>
+          ))}
+        </div>
       </div>
-      <div className="ProductList__container">
-        {list.map((data) => (
-          <div
-            className="ProductItem__container"
-            key={data.idDrink}
-            onClick={setSection}
-          >
-            <ProductItem data={data} />
-          </div>
-        ))}
-      </div>
-    </div>
+    </>
   );
 };
 

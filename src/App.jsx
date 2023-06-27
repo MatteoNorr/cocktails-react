@@ -1,7 +1,12 @@
+import ProductSection from "./components/ProductSection";
 import "./App.css";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <ProductSection />
+    </>
+  );
 }
 
 export default App;

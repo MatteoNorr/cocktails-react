@@ -2,17 +2,19 @@ import { useState, useEffect } from "react";
 import ProductSection from "./components/ProductSection";
 import ProductList from "./components/ProductList";
 import ProductItemFull from "./components/ProductItemFull";
+import Searchbar from "./components/Searchbar";
 import Login from "./components/Login";
 import "./App.css";
 
 function App() {
-  const [section, setSection] = useState("Login");
+  const [section, setSection] = useState("Home");
 
   {
     switch (section) {
-      case "home":
+      case "Home":
         return (
           <>
+            <Searchbar setSection={() => setSection("singleCocktail")} />
             <ProductSection />
             <ProductList name="Vodka" setSection={() => setSection("Vodka")} />
             <ProductList name="Rum" setSection={() => setSection("Rum")} />
@@ -23,7 +25,7 @@ function App() {
           </>
         );
       case "Login":
-        return <Login setSection={() => setSection("home")} />;
+        return <Login setSection={() => setSection("Home")} />;
       case "Vodka":
         return (
           <ProductItemFull name="Vodka" setSection={() => setSection("")} />
@@ -34,6 +36,8 @@ function App() {
         return (
           <ProductItemFull name="Tequila" setSection={() => setSection("")} />
         );
+      case "singleCocktail":
+        return <Searchbar />;
     }
   }
 }

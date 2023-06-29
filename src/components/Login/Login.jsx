@@ -55,7 +55,12 @@ const Login = ({ setSection }) => {
           value={mail}
           onChange={onInputChange}
         />
-        <input onClick={onSubmit} type="submit" value="Submit" />
+        <input
+          className="Login__submit"
+          onClick={onSubmit}
+          type="submit"
+          value="Submit"
+        />
       </form>
     </div>
   );

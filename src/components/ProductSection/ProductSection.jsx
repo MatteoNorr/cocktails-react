@@ -6,9 +6,9 @@ const ProductSection = () => {
   const [cocktail, setCocktail] = useState({});
 
   useEffect(() => {
-    GET(
-      "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
-    ).then((data) => setCocktail(data.drinks[0]));
+    GET("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=malibu").then(
+      (data) => setCocktail(data.drinks[0])
+    );
   }, []);
 
   return (

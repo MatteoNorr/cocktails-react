@@ -22,11 +22,15 @@ function App() {
           </>
         );
       case "Vodka":
-        return <ProductItemFull name="Vodka" />;
+        return (
+          <ProductItemFull name="Vodka" setSection={() => setSection("")} />
+        );
       case "Rum":
-        return <ProductItemFull name="Rum" />;
+        return <ProductItemFull name="Rum" setSection={() => setSection("")} />;
       case "Tequila":
-        return <ProductItemFull name="Tequila" />;
+        return (
+          <ProductItemFull name="Tequila" setSection={() => setSection("")} />
+        );
     }
   }
 }

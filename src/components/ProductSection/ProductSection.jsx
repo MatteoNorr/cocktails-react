@@ -2,13 +2,13 @@ import { useState, useEffect } from "react";
 import { GET } from "../../utils/https.js";
 import "./index.css";
 
-const ProductSection = () => {
+const ProductSection = ({ section }) => {
   const [cocktail, setCocktail] = useState({});
 
   useEffect(() => {
-    GET("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=malibu").then(
-      (data) => setCocktail(data.drinks[0])
-    );
+
+    GET("?s=" + section).then((data) => setCocktail(data.drinks[0]));
+
   }, []);
 
   return (

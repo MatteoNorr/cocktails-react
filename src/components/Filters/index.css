@@ -1,0 +1,16 @@
+.Filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid rgba(0, 0, 0, 0.275) 1px;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.vodka,
+.rum,
+.tequila {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

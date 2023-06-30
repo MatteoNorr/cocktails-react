@@ -1,0 +1,16 @@
+.Searchbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 2% 0;
+}
+
+.Searchbar__input {
+  width: 400px;
+}
+
+.Searchbar__submit {
+  background-color: rgb(236, 206, 73);
+  border: none;
+}

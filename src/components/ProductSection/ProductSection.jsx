@@ -6,7 +6,9 @@ const ProductSection = ({ section }) => {
   const [cocktail, setCocktail] = useState({});
 
   useEffect(() => {
+
     GET("?s=" + section).then((data) => setCocktail(data.drinks[0]));
+
   }, []);
 
   return (

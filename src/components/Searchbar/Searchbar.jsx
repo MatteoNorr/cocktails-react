@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+
 import "./index.css";
 
 const Searchbar = ({ setSection }) => {
   const [input, setInput] = useState("");
+
 
   const onChangeSearch = (e) => {
     setInput(e.target.value);
@@ -10,7 +12,9 @@ const Searchbar = ({ setSection }) => {
 
   const searchData = (e) => {
     e.preventDefault();
+
     setSection(input);
+
   };
 
   return (
@@ -19,10 +23,12 @@ const Searchbar = ({ setSection }) => {
         <input
           className="Searchbar__input"
           type="text"
+
           value={input}
           onChange={onChangeSearch}
         />
       </form>
+
     </div>
   );
 };

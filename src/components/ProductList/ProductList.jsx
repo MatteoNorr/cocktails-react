@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { GET } from "../../utils/https";
 import ProductItem from "../ProductItem";
 import "./index.css";
 

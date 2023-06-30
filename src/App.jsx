@@ -9,13 +9,11 @@ import "./App.css";
 function App() {
   const [section, setSection] = useState("Home");
 
-  {
+  const render = () => {
     switch (section) {
       case "Home":
         return (
           <>
-            <Searchbar setSection={() => setSection("singleCocktail")} />
-            <ProductSection section={section} />
             <ProductList name="Vodka" setSection={() => setSection("Vodka")} />
             <ProductList name="Rum" setSection={() => setSection("Rum")} />
             <ProductList
@@ -36,8 +34,17 @@ function App() {
         return (
           <ProductItemFull name="Tequila" setSection={() => setSection("")} />
         );
+      default:
+        return <ProductSection section={section} />;
     }
-  }
+  };
+
+  return (
+    <div>
+      <Searchbar setSection={setSection} />
+      {render()}
+    </div>
+  );
 }
 
 export default App;

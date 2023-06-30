@@ -15,7 +15,7 @@ function App() {
         return (
           <>
             <Searchbar setSection={() => setSection("singleCocktail")} />
-            <ProductSection />
+            <ProductSection section={section} />
             <ProductList name="Vodka" setSection={() => setSection("Vodka")} />
             <ProductList name="Rum" setSection={() => setSection("Rum")} />
             <ProductList
@@ -36,8 +36,6 @@ function App() {
         return (
           <ProductItemFull name="Tequila" setSection={() => setSection("")} />
         );
-      case "singleCocktail":
-        return <Searchbar />;
     }
   }
 }

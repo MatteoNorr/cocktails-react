@@ -1,14 +1,13 @@
 import { useState, useEffect } from "react";
-import { GET } from "../../utils/https";
 import "./index.css";
 
 const ProductItemFull = ({ name, setSection }) => {
   const [list, setList] = useState([]);
 
   useEffect(() => {
-    GET(
-      `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${name}`
-    ).then((data) => setList(data.drinks));
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${name}`)
+      .then((res) => res.json())
+      .then((data) => setList(data.drinks));
   }, []);
 
   return (

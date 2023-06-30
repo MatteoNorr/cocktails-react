@@ -7,4 +7,9 @@ body {
   margin: 0;
   padding: 0;
   max-width: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(236, 206, 73, 1) 0%,
+    rgba(0, 212, 255, 0.25253851540616246) 100%
+  );
 }

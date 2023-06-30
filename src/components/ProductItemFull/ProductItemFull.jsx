@@ -12,14 +12,16 @@ const ProductItemFull = ({ name, setSection }) => {
 
   return (
     <>
-      <h1 className="ProductItemFull__title">{name}</h1>
-      <button className="ProductItemFull__close-btn" onClick={setSection}>
-        X
-      </button>
+      <div className="ProductItemFull__heading">
+        <h1 className="ProductItemFull__title">{name}</h1>
+        <button className="ProductItemFull__close-btn" onClick={setSection}>
+          X
+        </button>
+      </div>
       {list.map((data) => (
         <div className="ProductItemFull">
           <img className="ProductItemFull__img" src={data.strDrinkThumb} />
-          <p className="ProductItemFull__title">{data.strDrink}</p>
+          <p className="ProductItemFull__title-prod">{data.strDrink}</p>
         </div>
       ))}
     </>

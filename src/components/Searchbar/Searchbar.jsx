@@ -16,9 +16,11 @@ const Searchbar = ({ setSection }) => {
 
   return (
     <div>
+      <h1 className="Searchbar-title">Cocktails</h1>
       <form className="Searchbar" onSubmit={searchData}>
         <input
           className="Searchbar__input"
+          placeholder="Search a cocktail..."
           type="text"
           value={input}
           onChange={onChangeSearch}
